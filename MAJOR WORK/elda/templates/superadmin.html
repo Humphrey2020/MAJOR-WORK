@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superadmin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Superadmin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'staff_list' %}">Manage Staff</a></li>
+                <li><a href="{% url 'candidate_list' %}">Manage Candidates</a></li>
+                <li><a href="{% url 'admin:logout' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Dashboard Overview</h2>
+            <p>Here you can manage all aspects of the platform, including staff, candidates, and system settings.</p>
+        </section>
+
+        <section>
+            <h3>Quick Actions</h3>
+            <ul>
+                <li><a href="{% url 'create_staff' %}">Create New Staff</a></li>
+                <li><a href="{% url 'create_candidate' %}">Create New Candidate</a></li>
+                <li><a href="{% url 'site_settings' %}">Site Settings</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>

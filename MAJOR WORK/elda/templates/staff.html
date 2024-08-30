@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Staff Dashboard</title>
+</head>
+<body>
+    <form method='POST' action="staff">
+        {% csrf_token %}
+    <h1>Welcome, {{ staff.full_name }}!</h1>
+    <p>Email: {{ staff.email }}</p>
+   <input type="submit"></input>
+</body>
+</form>
+</html>
